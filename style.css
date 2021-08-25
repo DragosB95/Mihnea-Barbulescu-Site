@@ -1,0 +1,201 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: var(--mainColor);
+    font-family: 'Neuton', serif;
+    color: whitesmoke;
+}
+
+:root {
+    --mainColor: #333333;
+    --secondaryColor:  #000044;
+    --thirdColor: #444444;
+    --forthColor:  #555555;
+    --lightColor: whitesmoke;
+}
+.nav-item {
+    font-size: 1.85rem;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+}
+.section1 {
+    background-image: url("https://www.oneinvestment.ca/sites/default/files/styles/masonry_large_2x/public/assets/homepage_hero/background_image/iStock-943292690_Backdrop.jpg?itok=XssTjaZw");
+    background-position: top center;
+    background-size: cover;
+}
+
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.heroText {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding-left: 2.5rem;
+    justify-content: center;
+    text-align: center;
+}
+.heroText h1{
+    font-size: 7rem;
+    font-weight: 550;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+                0px 8px 13px rgba(0,0,0,0.1),
+                0px 18px 23px rgba(0,0,0,0.1);
+}
+.heroText p{
+    font-size: 2rem;
+    font-weight: 300;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+                0px 8px 13px rgba(0,0,0,0.1),
+                0px 18px 23px rgba(0,0,0,0.1);
+}
+
+.buttonDiv {
+    justify-content: center;
+}
+.heroButton {
+    width: 20rem;
+    height: 8rem;
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 3rem;
+    color: var(--lightColor);
+    background-color: var(--secondaryColor);
+    border: none;
+    border-radius: 3rem;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+                0px 8px 13px rgba(0,0,0,0.1),
+                0px 18px 23px rgba(0,0,0,0.1);
+}
+
+
+
+.section2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "title-container title-container"
+    "left-wrapper right-wrapper";
+    margin-top: 5rem;
+    background: rgb(51,51,51);
+    background: linear-gradient(180deg, rgba(51,51,51,1) 0%, rgba(13,13,142,1) 35%, rgba(0,0,68,1) 100%);
+}
+
+.title-container {
+    grid-area: title-container;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+}
+.left-wrapper {
+    grid-area: left-wrapper;
+    padding: 1rem 2rem;
+}
+.left-wrapper p {
+    font-size: 1.25rem;
+}
+.right-wrapper {
+    grid-area: right-wrapper;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: none;
+}
+.right-wrapper ul {
+    list-style-type: none;
+}
+
+.experienceTitle {
+    font-size: 6rem
+}
+.milestones-subtitle {
+    font-size: 3rem;
+    font-style: italic;
+}
+.milestones-subtitle__list {
+    text-align: center;
+}
+
+.section3{
+    background: rgb(51,51,51);
+    background: linear-gradient(0deg, rgba(51,51,51,1) 0%, rgba(13,13,142,1) 35%, rgba(0,0,68,1) 100%);
+    display: flex;
+}
+
+@media screen and (max-width: 800px){
+    .logo {
+        width: 2.2rem;
+        height: 2rem;
+    }
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+
+    .main-container {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .section1 {
+        padding: 2rem 1rem;
+    }
+
+    .heroText{
+        padding-top: 3rem;
+        padding-bottom: 5rem;
+    }
+    .heroButton {
+        width: 18rem;
+        height: 8rem;
+        font-style: italic;
+        font-weight: bold;
+        font-size: 2.5rem;
+        border: none;
+        border-radius: 3rem;
+    }
+    
+    .experienceTitle {
+        font-size: 4.5rem
+    }
+    .section2 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "title-container"
+        "left-wrapper"
+        "right-wrapper";
+    }
+
+}
+
+@media screen and (max-width: 600px){
+    .heroButton {
+        width: 14rem;
+        height: 7rem;
+        font-size: 2rem;
+        border-radius: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .heroButton {
+        width: 8rem;
+        height: 6rem;
+        font-size: 1.8rem;
+        border-radius: 2.5rem;
+    }
+}
