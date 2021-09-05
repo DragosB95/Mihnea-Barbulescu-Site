@@ -1,11 +1,20 @@
+
+
+html {
+    scroll-behavior: smooth;
+}
+
 html, body {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 body {
     background-color: var(--mainColor);
     font-family: 'Neuton', serif;
-    color: whitesmoke;
+    color: black;
+    background: rgb(0,0,68);
+    background: linear-gradient(0deg, rgba(0,0,68,1) 21%, rgba(243,242,237,1) 70%);
 }
 
 :root {
@@ -15,6 +24,19 @@ body {
     --forthColor:  #555555;
     --lightColor: whitesmoke;
 }
+
+/*Effects*/
+.Fade-in {
+    opacity: 0;
+    transition: opacity 750ms ease-in;
+}
+.Fade-in.Appear {
+    opacity: 1;
+}
+/*End of effects section*/
+
+
+
 .nav-item {
     font-size: 1.85rem;
 }
@@ -24,9 +46,16 @@ body {
     font-weight: bolder;
 }
 .section1 {
-    background-image: url("https://www.oneinvestment.ca/sites/default/files/styles/masonry_large_2x/public/assets/homepage_hero/background_image/iStock-943292690_Backdrop.jpg?itok=XssTjaZw");
-    background-position: top center;
+    background-image: url("https://dce.harvard.edu/wp-content/uploads/sites/9/2020/03/public-speaking.jpg");
+    background-position: center;
     background-size: cover;
+}
+
+.main-container img {
+    max-height: 100%;
+    height: 50rem;
+    max-width: 100%;
+    margin: 2rem 2rem;
 }
 
 
@@ -35,6 +64,7 @@ body {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    padding: 4rem;
 }
 
 .heroText {
@@ -42,11 +72,12 @@ body {
     flex-direction: column;
     width: 50%;
     padding-left: 2.5rem;
+    padding-right: 2.5rem;
     justify-content: center;
     text-align: center;
 }
 .heroText h1{
-    font-size: 7rem;
+    font-size: 6vw;
     font-weight: 550;
     text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
                 0px 8px 13px rgba(0,0,0,0.1),
@@ -63,9 +94,9 @@ body {
 .buttonDiv {
     justify-content: center;
 }
+
 .heroButton {
-    width: 20rem;
-    height: 8rem;
+    padding: 2rem;
     text-align: center;
     font-style: italic;
     font-weight: bold;
@@ -79,6 +110,12 @@ body {
                 0px 18px 23px rgba(0,0,0,0.1);
 }
 
+.heroButton:hover {
+    color: var(--secondaryColor);
+    background-color: var(--lightColor);
+    transform: scale(1.1);
+}
+
 .section2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -87,8 +124,7 @@ body {
     "title-container title-container"
     "left-wrapper right-wrapper";
     margin-top: 5rem;
-    background: rgb(51,51,51);
-    background: linear-gradient(180deg, rgba(51,51,51,1) 0%, rgba(13,13,142,1) 35%, rgba(0,0,68,1) 100%);
+    padding-right: 2rem;
 }
 
 .title-container {
@@ -118,7 +154,7 @@ body {
 }
 
 .experienceTitle {
-    font-size: 6rem
+    font-size: 6rem;
 }
 .milestones-subtitle {
     font-size: 3rem;
@@ -129,8 +165,6 @@ body {
 }
 
 .section3 {
-    background: rgb(51,51,51);
-    background: linear-gradient(180deg, rgba(0,0,68,1) 0%,rgba(13,13,142,1) 30%,rgba(51,51,51,1) 65%);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
@@ -144,6 +178,9 @@ body {
     grid-area: presentation-title;
     display: flex;
     justify-content: center;
+    text-align: center;
+    font-size: 6rem;
+    padding: 1rem 1rem;
 }
 
 .left-video {
@@ -151,12 +188,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 2rem 0rem;
 }
 .right-video {
     grid-area: right-video;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 2rem 0rem;
 }
 .left-video iframe{
     border: none;
@@ -172,12 +211,219 @@ body {
                 0px 20px 13px rgba(0,0,0,0.1),
                 0px 25px 23px rgba(0,0,0,0.1);
 }
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .section4 {
-    background: linear-gradient(180deg, rgba(51,51,51,1) 0%, rgba(13,13,142,1) 90%, rgba(0,0,68,1) 100%);
+    padding: 8rem 5rem;
+    display: flex;
+    flex-direction: row;
+}
+.card {
+    border-radius: 10px;
+    margin: 1.5rem 1.5rem;
+    background: radial-gradient(circle, rgba(255,255,255,1) 8%, rgba(59,152,170,1) 96%);
+}
+.card:hover{
+    transform: scale(1.1);
+    background: radial-gradient(circle, rgba(255,255,255,1) 8%, rgba(59,152,170,1) 92%,rgba(255,255,255,1) 8%);;
+}
+.form-title {
+    text-align: center;
+    font-size: 6rem;
+    padding: 3rem 1rem;
+    font-style: italic;
+    font-weight: bolder;
 }
 
+/*Contact form css*/
+.Container {
+    width: 90%;
+    max-width: 31.2rem;
+    margin: 0 auto;
+    padding: 1.25rem;
+    box-shadow: 0px 0px 1.25rem #00000010;
+    background-color: whitesmoke;
+    border-radius: 0.5rem;
+    margin-bottom: 1.25rem;
+  }
 
-@media screen and (max-width: 800px){
+  .form-group {
+    width: 100%;
+    margin-top: 1.3rem;
+    font-size: 1.3rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.3rem;
+    font-size: 1.1rem;
+    border: 1px solid rgba(128, 128, 128, 0.199);
+    margin-top: 0.3rem;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  button[type="submit"] {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 1.3rem;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    color: rgba(0,0,68,1);
+    text-align: center;
+    cursor: pointer;
+    margin-top: 0.6rem;
+    transition: 0.3s ease background-color;
+  }
+  button[type="submit"]:hover {
+    background-color: rgb(214, 226, 236);
+  }
+  #status {
+    width: 90%;
+    max-width: 31.2rem;
+    text-align: center;
+    padding: 0.75rem;
+    margin: 1rem auto;
+    border-radius: 0.5rem;
+  }
+  #status.success {
+    background-color: rgb(211, 250, 153);
+    animation: status 6s ease forwards;
+  }
+  #status.error {
+    background-color: rgb(250, 129, 92);
+    color: white;
+    animation: status 6s ease forwards;
+  }
+  @keyframes status {
+    0% {
+      opacity: 1;
+      pointer-events: all;
+    }
+    90% {
+      opacity: 1;
+      pointer-events: all;
+    }
+    100% {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+
+  .footer-left-section {
+    border-right: 1px solid whitesmoke;
+}
+  .footer-left-section h2 {
+      font-size: 2.5rem;
+  }
+  .footer-right-section span {
+    font-size: 1.8rem;
+    background: linear-gradient(#aa4b6b, #6b6b83, #3b8d99);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+
+  .footer-left-section ul i,
+  .footer-right-section ul i {
+    padding: 0.6rem 0.8rem;
+    font-size: 1.6rem;
+  }
+
+  .footer-left-section .list-unstyled .medias i:hover,
+  .footer-right-section .list-unstyled .medias i:hover {
+      font-size: 2.2rem;
+  }
+
+  .footer-left-section .medias i:hover {
+      color:rgb(65, 147, 241);
+      cursor: pointer;
+      font-size: 2rem;
+  }
+
+  .footer-right-section ul i:hover {
+    color: greenyellow;
+    cursor: pointer;
+    font-size: 2rem;
+  }
+  
+/*End of contact form css*/
+
+@media screen and (max-width: 992px){
+    .logo {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    .navbar-brand {
+        font-size: 1.8rem;
+    }
+
+    .main-container {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .section1 {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .section1 img {
+        max-height: 45rem;
+        margin: 1.8rem 1.8rem;
+    }
+
+    .heroText{
+        width: 100%;
+        padding-top: 4rem;
+        padding-bottom: 6rem;
+        align-items: center;
+    }
+
+    .heroText h1{
+        font-size: 12vw;
+    }
+
+    .heroButton {
+        font-style: italic;
+        font-weight: bold;
+        font-size: 3rem;
+        border: none;
+        border-radius: 3.2rem;
+    }
+    
+    .experienceTitle {
+        font-size: 5rem;
+    }
+    .section2 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "title-container"
+        "left-wrapper"
+        "right-wrapper";
+    }
+    .section3 {
+        display: flex;
+        flex-direction: column;
+    }
+    .section4 {
+        padding: 4.5rem 3.2rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (max-width: 768px){
     .logo {
         width: 2.2rem;
         height: 2rem;
@@ -195,13 +441,23 @@ body {
         padding: 2rem 1rem;
     }
 
+    .section1 img {
+        max-height: 40rem;
+        margin: 1.5rem 1.5rem;
+    }
+
     .heroText{
+        width: 100%;
         padding-top: 3rem;
         padding-bottom: 5rem;
+        align-items: center;
     }
+
+    .heroText h1{
+        font-size: 10vw;
+    }
+
     .heroButton {
-        width: 18rem;
-        height: 8rem;
         font-style: italic;
         font-weight: bold;
         font-size: 2.5rem;
@@ -210,7 +466,7 @@ body {
     }
     
     .experienceTitle {
-        font-size: 4.5rem
+        font-size: 4.5rem;
     }
     .section2 {
         display: grid;
@@ -221,26 +477,47 @@ body {
         "left-wrapper"
         "right-wrapper";
     }
+    .section3 {
+        display: flex;
+        flex-direction: column;
+    }
+    .presentation-title {
+        font-size: 4.5rem;
+    }
+
+    .section4 {
+        padding: 4rem 3rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .card {
+        border-radius: 10px;
+        margin: 1.5rem 1.5rem;
+    }
+    .card:hover{
+        transform: none;
+        background: radial-gradient(circle, rgba(255,255,255,1) 8%, rgba(59,152,170,1) 92%,rgba(255,255,255,1) 8%);;
+    }
+    .form-title {
+        text-align: center;
+        font-size: 4rem;
+        padding: 1.5rem 1rem;
+    }
+    .footer-left-section {
+        border-right: none;
+        border-bottom: 1px solid whitesmoke;
+    }
 
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 576px){
     .heroButton {
-        width: 14rem;
-        height: 7rem;
         font-size: 2rem;
         border-radius: 2.5rem;
     }
-}
-
-@media screen and (max-width: 500px){
-    .heroButton {
-        width: 8rem;
-        height: 6rem;
-        font-size: 1.8rem;
-        border-radius: 2.5rem;
-    }
-    .heroText h1{
-        font-size: 3rem;
+    .section4 {
+        padding: 5rem 5rem;
+        display: flex;
+        flex-direction: column;
     }
 }

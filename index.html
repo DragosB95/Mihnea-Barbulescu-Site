@@ -10,6 +10,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,33 +32,34 @@
                 <a class="nav-link" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item mx-2">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="#about-me">About</a>
               </li>
               <li class="nav-item mx-2">
-                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link" href="#my-footer">Contact</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
 
+      <div class="wrapper">
       <section class="section1">
           <div class="main-container">
             <div class="heroText">
-              <h1>Hello, my name is Mihnea Barbulescu</h1>
-              <p>This is my website where you will get to learn more about me and even ask me financial themed questions.</p>
-              <div class="buttonDiv">
-                <button class="heroButton">Click Now</button>
-              </div>
+               <h1>Hello, my name is Mihnea Barbulescu</h1>
+               <p>This is my website where you will get to learn more about me and even ask me financial themed questions.</p>
+               <div class="buttonDiv">
+                 <button class="heroButton" onclick="goToBottom()">Ask Me a Question</button>
+               </div>
             </div>
             <div class="img-fluid">
-              <img src="https://d1ok5audnc2xsv.cloudfront.net/hire-developers-risk-free-upstack.png" alt="Front-end developer" class="img-fluid">
+              <img src="High resolution photos/000025 as Smart Object-1.JPG" alt="Profile pic" class="img-fluid">
             </div>
           </div>
       </section>
-      <section class="section2">
+      <section class="section2 Fade-in">
         <div class="title-container">
-          <h1 class="experienceTitle">Experience</h1>
+          <h1 class="experienceTitle" id="about-me">Experience</h1>
         </div>
         <div class="left-wrapper">
           <p>Suspendisse potenti. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Pellentesque dui nisl, luctus vel cursus id, suscipit eget arcu. Proin congue ac nibh ac gravida. Nullam imperdiet orci vitae suscipit placerat. Nulla volutpat ligula eu commodo sollicitudin. Mauris scelerisque, tortor id pretium venenatis, enim sapien hendrerit massa, et efficitur sem turpis a lorem. Integer mattis sodales dui eu congue. Donec condimentum elit vel diam malesuada, eget porta purus interdum. Pellentesque consequat metus a porta viverra. Curabitur rutrum rutrum nunc hendrerit rhoncus. Duis aliquam vitae magna nec iaculis. Sed quis nisi congue, aliquet arcu quis, tincidunt lorem. Mauris sed libero viverra felis viverra dapibus. Nullam sodales orci nec libero elementum, ut scelerisque nisi eleifend.
@@ -101,11 +103,97 @@
         </div>
       </section>
       <section class="section4">
-        <h1>Generic Title</h1>
-        <h1>Generic Title</h1>
-        <h1>Generic Title</h1>
-        <h1>Generic Title</h1>
+          <div class="col-lg-4 col-md-12 col-sm-12">
+            <div class="card">
+              <div class="card-body">
+                <img src="https://media.istockphoto.com/photos/unknown-businesswoman-silhouette-picture-id487234780?k=20&m=487234780&s=612x612&w=0&h=YzDESUjloOZqJ3rFo6PhQc-XJ3gh1nwAdpoMuQMyfd0=" alt="Person1Profile" class="img-fluid rounded-circle w-50 mb-3">
+                <h2>Susan Dolores</h2>
+                <h5>CEO of McDonald's</h5>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem ipsa natus repellendus magnam enim quod nulla omnis distinctio rem, obcaecati perspiciatis, laboriosam sapiente illum dolorum quam necessitatibus corrupti fuga ducimus?</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-12 col-sm-12">
+            <div class="card">
+              <div class="card-body">
+                <img src="https://media.istockphoto.com/photos/unknown-businesswoman-silhouette-picture-id487234780?k=20&m=487234780&s=612x612&w=0&h=YzDESUjloOZqJ3rFo6PhQc-XJ3gh1nwAdpoMuQMyfd0=" alt="Person1Profile" class="img-fluid rounded-circle w-50 mb-3">
+                <h2>Benone Sinulescu</h2>
+                <h5>CEO of Walmart</h5>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem ipsa natus repellendus magnam enim quod nulla omnis distinctio rem, obcaecati perspiciatis, laboriosam sapiente illum dolorum quam necessitatibus corrupti fuga ducimus?</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-12 col-sm-12">
+            <div class="card">
+              <div class="card-body">
+                <img src="https://media.istockphoto.com/photos/unknown-businesswoman-silhouette-picture-id487234780?k=20&m=487234780&s=612x612&w=0&h=YzDESUjloOZqJ3rFo6PhQc-XJ3gh1nwAdpoMuQMyfd0=" alt="Person1Profile" class="img-fluid rounded-circle w-50 mb-3">
+                <h2>Ben Dover</h2>
+                <h5>CEO of Mega Image</h5>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem ipsa natus repellendus magnam enim quod nulla omnis distinctio rem, obcaecati perspiciatis, laboriosam sapiente illum dolorum quam necessitatibus corrupti fuga ducimus?</p>
+              </div>
+            </div>
+          </div>
       </section>
+      <section class="section5" id="section5">
+        <h1 class="form-title">Ask Me A Financial Themed Question</h1>
+          <div class="Container">
+            <form action="https://formspree.io/f/mqkwwpbp" method="POST" id="my-form">
+        
+              <div class="form-group">
+                <label for="firstName"> First Name</label>
+                <input type="text" id="firstName" name="firstName">
+              </div>
+        
+              <div class="form-group">
+                <label for="latsName">Last Name</label>
+                <input type="text" id="lastName" name="lastName">
+              </div>
+        
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+              </div>
+        
+              <div class="form-group">
+                <label for="massage">Message</label>
+                <textarea name="massage" id="massage" cols="30" rows="10"></textarea>
+              </div>
+        
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+          <div id="status"></div>
+      </section>
+
+      <footer class="bg-dark text-white pt-4 pb-4" id="my-footer">
+        <div class="container">
+          <div class="row text-center d-flex flex-row justify-content-around">
+            <div class="footer-left-section col-12 col-md-6">
+              <h2>Contact Info</h2>
+              <ul class="list-unstyled">
+                <i class="bi bi-house-door-fill d-block ">Office Adress: Bulevardul Aviatorilor 92, Bucuresti</i>
+                <i class="bi bi-envelope-fill d-block">Email: mihnea.barbulescu@erste-am.ro</i>
+              </ul>
+              <h4>Social Medias:</h4>
+              <ul class="list-unstyled list-inline medias">
+                <a href="https://www.facebook.com/mihnea.barbulescu" target="_blank"> <i class="bi bi-facebook mx-1"></i></a>
+                <a href="https://www.linkedin.com/in/mihnea-barbulescu-51b36820/" target="_blank"> <i class="bi bi-linkedin mx-1"></i></a>
+              </ul>
+            </div>
+          
+            <div class="footer-right-section col-12 col-md-6">
+              <h5 class="text-uppercase mx-auto">This website was made by <span>Barbulescu Dragoș</span> , developer based in Bucharest</h5>
+              <h4>Socials</h4>
+              <ul class="list-unstyled list-inline medias">
+                <a href="https://www.facebook.com/dragos.barbulescu.1" target="_blank"> <i class="bi bi-facebook mx-1"></i></a>
+                <a href="https://www.linkedin.com/in/dragos-barbulescu-a474b5163/" target="_blank"> <i class="bi bi-linkedin mx-1"></i></a>
+                <a href="https://github.com/DragosB95" target="_blank"> <i class="bi bi-github mx-1"></i></a>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
 
     <script src="script.js"></script>
 
